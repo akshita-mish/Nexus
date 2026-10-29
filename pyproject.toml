@@ -1,0 +1,11 @@
+[project]
+name = "nexus-backend"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.162.0",
+    "pydantic>=2.14.1",
+    "pymongo>=4.19.0",
+    "python-dotenv>=1.2.4",
+]
