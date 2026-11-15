@@ -15,7 +15,7 @@ async def get_current_user(creds=Depends(bearer_schema)):
 
     # 2. Decode the token (fails if it's fake or expired)
     try:
-        payload = jwt.decode(token, secret_key, algorithm=[algo])
+        payload = jwt.decode(token, secret_key, algorithms=[algo])
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
 
