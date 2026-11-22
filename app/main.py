@@ -2,7 +2,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from app.db.config import client, create_indexs
 from app.api.routes.health import router as health_router
-from app.users.router import router as auth_router
+from app.users.routes import router as auth_router
+from app.workspaces.routes import router as workspace_router
 
 
 @asynccontextmanager
@@ -22,3 +23,4 @@ app = FastAPI(lifespan=lifespan)
 
 app.include_router(health_router)
 app.include_router(auth_router)
+app.include_router(workspace_router)
