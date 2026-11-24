@@ -15,3 +15,4 @@ db = client["nexus"]
 
 async def create_indexs():
     await db.users.create_index("email", unique=True)
+    
